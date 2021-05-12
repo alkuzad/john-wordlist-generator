@@ -4,5 +4,5 @@
 2. Download jumbo version of John from <https://www.openwall.com/john/>
 3. Generate wordlist using wordlist.py
 4. For SSH, use `ssh2john.py ~/.ssh/key > ssh.hash` to convert private key to john's hash format
-5. If hash file is generated with 2 lines, remove first one (some old scripts do that)
+5. If hash file is generated with 2 lines of data, remove first one (some old scripts do that). Do not delete anything if it's only newline.
 6. Start john from `run` folder - `.\john.exe --format=ssh --session=ssh -wordlist=C:\wordlist-generated.txt ssh.hash`
