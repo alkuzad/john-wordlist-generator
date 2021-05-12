@@ -18,14 +18,14 @@ for repeat in range(1, 5):
             for suf in suff_mix:
                 pro_pre_suf.append(f"{pro}{suf}")
                 if(len(pro_pre_suf) == 300000):
-                    with open('wordlist-generated.txt', 'a') as wordlist:
+                    with open('wordlist-generated.txt', 'a', encoding="utf-8", newline="\n") as wordlist:
                         stro = "\n".join(set(pro_pre_suf))
                         wordlist.write(stro)
                         print("Wrote batch")
                     pro_pre_suf = []
 
 if pro_pre_suf:
-    with open('wordlist-generated.txt', 'a') as wordlist:
+    with open('wordlist-generated.txt', 'a', encoding="utf-8", newline="\n") as wordlist:
         stro = "\n".join(set(pro_pre_suf))
         wordlist.write(stro)
         print("Wrote remaining batch")
